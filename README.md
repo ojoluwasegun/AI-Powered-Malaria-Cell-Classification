@@ -1,0 +1,2 @@
+# AI-Powered-Malaria-Cell-Classification
+Developed a deep learning model for malaria cell classification using VGG19 and transfer learning. The system accurately distinguishes infected and healthy blood cells from microscopic images, supporting faster and more reliable diagnosis. #ArtificialIntelligence #DeepLearning #ComputerVision #MedicalImaging #HealthcareAI #MachineLearning #VGG19
