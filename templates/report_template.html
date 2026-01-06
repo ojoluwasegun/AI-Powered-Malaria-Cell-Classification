@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Medical Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        h2 { color: #dc3545; }
+        .header { margin-bottom: 20px; }
+        .content { border: 1px solid #ccc; padding: 15px; border-radius: 10px; }
+        .scan-img { max-height: 300px; border-radius: 10px; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>University Teaching Hospital</h2>
+        <p>123 University Road, Cityville, State</p>
+        <p>Phone: +234 800 123 4567</p>
+        <hr>
+    </div>
+
+    <div class="content">
+        <h3>AI Malaria Detection Report</h3>
+        <p><strong>Patient Name:</strong> {{ fullname }}</p>
+        <p><strong>Patient ID:</strong> {{ patient_id }}</p>
+        <p><strong>Consultant:</strong> Dr. A. B. Okafor</p>
+        <p><strong>Diagnosis:</strong> {{ prediction.label }}</p>
+        <p><strong>Confidence:</strong> {{ prediction.confidence }}%</p>
+
+        {% if request.files %}
+        <p><strong>Scan Image:</strong></p>
+        <img src="{{ url_for('static', filename='uploaded_scan.png') }}" class="scan-img">
+        {% endif %}
+    </div>
+</body>
+</html>
